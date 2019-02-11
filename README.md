@@ -1,1 +1,1 @@
-# Resume and Curriculum Vitae
+# Résumé and Curriculum Vitae
