@@ -7,7 +7,7 @@
 \usepackage{framed,tabularx,array}
 \usepackage{tocloft}
 \usepackage{tgpagella}
-\usepackage[english,ngerman]{babel}
+\usepackage[english]{babel}
 \usepackage[hidelinks]{hyperref}
 \usepackage{fancyhdr}
 \usepackage{lastpage}
@@ -16,7 +16,11 @@
 \usepackage[T1]{fontenc}
 \usepackage{fontawesome}
 \usepackage[nodayofweek]{datetime}
-
+\usepackage{siunitx}
+\usepackage{amsfonts}
+\usepackage{booktabs}
+\usepackage{multirow}
+\usepackage{array}
 %-----------------------------------------------------------
 
 \setlength{\outerbordwidth}{0pt}  % Width of border outside of title bars
@@ -42,10 +46,9 @@
 \renewcommand{\headrulewidth}{0pt}
 \pagestyle{fancy}
 \fancyhf{}
-\fancyfoot[R]{\textcolor{gray}{\thepage\ of \pageref{LastPage}}}
+\fancyfoot[R]{\textcolor{gray}{\textit{\thepage\ of \pageref{LastPage}}}}
 \fancyfoot[L]{\textcolor{gray}{\textit{Curriculum Vitae}}}
-\fancyfoot[C]{\textcolor{gray}{\textit{\shortdate
-			\today}}}
+\fancyfoot[C]{\textcolor{gray}{\textit{\shortdate\today}}}
 %-----------------------------------------------------------
 %Custom commands
 
@@ -91,7 +94,7 @@
 	
 	\begin{itemize}
 		\resitem{Major in Computer Science and Minor in Electrical Engineering}
-		\resitem{Cumulative GPA: 8.50.}
+		\resitem{Cumulative GPA: 8.50 / 9.00}
 		\resitem{Expected Apr. 2021}
 	\end{itemize}
 	
@@ -108,13 +111,12 @@
 	%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 	Computer Vision \textbullet{} Medical Image Processing \textbullet{} Deep Learning
 	
-	I aim to combine deep learning and medical images processing
-	in some way to reduce the fees to obtain expert diagnostic result as well as boost diagnostic accuary
+	I aim to combine deep learning and medical image processing to obtain expert diagnostic result as well as boost diagnostic accuracy. My ultimate goal is to predict disease before it happens. 
 	
 	%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 	\resheading{Research Experience}
 	%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-	\ressubheading{\href{https://vision.uvic.ca}{Visual Computing Group at the University of Victoria}}{Victoria, BC, Canada}{\textit{Undergraduate Research Assistant}}{May 2019 -- Aug. 2019}
+	\ressubheading{\href{https://vision.uvic.ca}{Visual Computing Group | University of Victoria}}{Victoria, BC, Canada}{\textit{Undergraduate Research Assistant}}{May 2019 -- Aug. 2019}
 	
 	\begin{itemize}
 		\resitem{TBD.}
@@ -149,19 +151,44 @@
 	%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 	\resheading{Projects}
 	%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-	
+	\begin{center} \vspace{-5pt}
+		\begin{tabular}{llc} 
+			\toprule
+			{Project Title} & {Keywords} & {Report / Demo} \\ 
+			\midrule
+			\multirow{2}{*}{End-to-End Facial Expression Modifier} & Conditional GAN & {\href{https://drive.google.com/file/d/1XyAWn8jRRZzFj3G4Rd6Qv-b85v7mBodk/view?usp=sharing}{\faCloudDownload}} \\
+			& Style Transfer & \\ \hline
+			\multirow{2}{*}{\parbox{11.4cm}{Segmentation of Cervical Cells by Joint Level Set Method}} & Level Set Method & {\href{https://drive.google.com/file/d/15seENaFC46H68YfpHWCDM-wuyLNIhuWC/view?usp=sharing}{\faCloudDownload}}\\
+			& Segmentation & \\
+			%\multirow{2}{*}{Strikers} & ST & Alan Smith \\
+			% & ST & Mark Viduka \\
+			%    11 & 0.598  & -0.597 \\ \bottomrule
+			\bottomrule
+		\end{tabular}
+	\end{center}
 	%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 	\resheading{Selected Course History}
 	%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-	
+	\begin{center} \vspace{-5pt}
+		\begin{tabular}{m{10cm} >{\centering\arraybackslash}m{2cm} >{\centering\arraybackslash}m{5cm}}
+			\toprule
+			Course Name    & Grade & Instructor\\
+			\midrule
+			Deep Learning for Computer Vision  & A+ (94\%) & Kwang Moo Yi \\
+			Medical Image Processing       & A+ (95\%)     & Alexandra Albu      \\
+			Introduction to Artificial Intelligence       & A+ (90\%)      & Alex Thomo      \\
+			Introduction to Computer Graphics & A+ (95\%)      & Li Ji       \\
+			\bottomrule
+		\end{tabular}
+	\end{center}
 	%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 	\resheading{Awards \& Scholarships}
 	%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 	\textbf{Associate with Institute for Advanced Study, Shenzhen University}
-	\begin{itemize}
-		\resitem{Outstanding Innovative Talent (2017)}
-		\resitem{Excellent Student to Academic Performance (2017)}
-		\resitem{Huaqiang Entrance Scholarship (2015)}
+	\begin{itemize}\vspace{-8pt}
+		\resitem{Outstanding Innovative Talent (First Prize, 2017)}
+		\resitem{Excellent Student to Academic Performance (Second Prize, 2017)}
+		\resitem{Huaqiang Entrance Scholarship (Second Prize, 2015)}
 	\end{itemize}
 	
 	%Z%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
