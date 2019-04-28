@@ -15,6 +15,7 @@
 \usepackage[utf8]{inputenc}
 \usepackage[T1]{fontenc}
 \usepackage{fontawesome}
+\usepackage[nodayofweek]{datetime}
 
 %-----------------------------------------------------------
 
@@ -42,140 +43,143 @@
 \pagestyle{fancy}
 \fancyhf{}
 \fancyfoot[R]{\textcolor{gray}{\thepage\ of \pageref{LastPage}}}
-\fancyfoot[L]{\textcolor{gray}{\textit{Curriculum Vitae, Jan 2019}}}
-
+\fancyfoot[L]{\textcolor{gray}{\textit{Curriculum Vitae}}}
+\fancyfoot[C]{\textcolor{gray}{\textit{\shortdate
+			\today}}}
 %-----------------------------------------------------------
 %Custom commands
-\newcommand{\resitem}[1]{\item[--] #1 \vspace{-2pt}}
-\newcommand{\resheading}[1]{\vspace{-10pt}
-  \parbox{\textwidth}{\setlength{\FrameSep}{\outerbordwidth}
-    \begin{shaded}
-\setlength{\fboxrule}{0pt}\setlength{\fboxsep}{0pt}\framebox[\textwidth][l]{\setlength{\fboxsep}{4pt}\fcolorbox{shadecolorB}{shadecolorB}{\textbf{\sffamily{\mbox{~}\makebox[6.762in][l]{\large #1} \vphantom{p\^{E}}}}}}
-    \end{shaded}
-  }\vspace{-5pt}
+
+\newcommand{\resitem}[1]{\item[$-$] #1 \vspace{-7pt}}
+
+\newcommand{\resheading}[1]{\vspace{-5pt}
+	\parbox{\textwidth}{\setlength{\FrameSep}{\outerbordwidth}
+		\begin{shaded}
+			\setlength{\fboxrule}{0pt}\setlength{\fboxsep}{0pt}\framebox[\textwidth][l]{\setlength{\fboxsep}{4pt}\fcolorbox{shadecolorB}{shadecolorB}{\textbf{\sffamily{\mbox{~}\makebox[6.762in][l]{\large \textbf{\textsc{#1}}} \vphantom{p\^{E}}}}}}
+		\end{shaded}
+	}\vspace{-5pt}
 }
-\newcommand{\resheadingfirst}[1]{\vspace{8pt}
-  \parbox{\textwidth}{\setlength{\FrameSep}{\outerbordwidth}
-    \begin{shaded}
-\setlength{\fboxrule}{0pt}\setlength{\fboxsep}{0pt}\framebox[\textwidth][l]{\setlength{\fboxsep}{4pt}\fcolorbox{shadecolorB}{shadecolorB}{\textbf{\sffamily{\mbox{~}\makebox[6.762in][l]{\large #1} \vphantom{p\^{E}}}}}}
-    \end{shaded}
-  }\vspace{-5pt}
+
+\newcommand{\resheadingfirst}[1]{\vspace{0pt}
+	\parbox{\textwidth}{\setlength{\FrameSep}{\outerbordwidth}
+		\begin{shaded}
+			\setlength{\fboxrule}{0pt}\setlength{\fboxsep}{0pt}\framebox[\textwidth][l]{\setlength{\fboxsep}{4pt}\fcolorbox{shadecolorB}{shadecolorB}{\textbf{\sffamily{\mbox{~}\makebox[6.762in][l]{\large #1} \vphantom{p\^{E}}}}}}
+		\end{shaded}
+	}\vspace{-5pt}
 }
 \newcommand{\ressubheading}[4]{
-\begin{tabular*}{7in}{l@{\cftdotfill{\cftsecdotsep}\extracolsep{\fill}}r}
+	\begin{tabular*}{7in}{l@{\cftdotfill{\cftsecdotsep}\extracolsep{\fill}}r}
 		\textbf{#1} & #2 \\
 		{#3} & {#4} \\
-\end{tabular*}\vspace{-6pt}}
+	\end{tabular*}\vspace{-6pt}}
 %-----------------------------------------------------------
 
 
 \begin{document}
-
-\begin{tabularx}{7in}{Xr}
-  \textbf{\Large Yiping Wang} & {\href{https://yiping.wang.vision}{\fontfamily{qcr}\selectfont yiping.wang.vision}} \\
- {\fontfamily{qcr}\selectfont +1(250)885-2950 \href{mailto:yipingwang@uvic.ca}{yipingwang@uvic.ca}} & {\faGithub} {\href{https://www.github.com/yiping-wang}{\fontfamily{qcr}\selectfont github.com/yiping-wang}} \\
-\end{tabularx}
-\par\noindent\rule{\textwidth}{1pt}
-
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-\resheadingfirst{Education}
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-
-\ressubheading{\href{https://www.uvic.ca/engineering/computerscience/index.php}{University of Victoria}}{Victoria, BC, Canada}{B.Sc. (Honours) in Computer Science}{Sept. 2017 - Present}
-
-\begin{itemize}
-	\resitem{Minor in Electrical Systems and Accredited Co-op Education}
-	\resitem{Cumulative GPA: 8.50 / 9.00 (or 3.97 / 4.00)}
-    \resitem{Expected Apr. 2020}
-\end{itemize}
-
-\ressubheading{\href{http://ias.szu.edu.cn}{Institute for Advanced Study, Shenzhen University}}{Shenzhen, Guangdong, China}{B.Sc. in Mathematics}{Sept. 2015 - Jun. 2017}
-
-\begin{itemize}
-	\resitem{Cumulative GPA: 3.76 / 4.00}
-    \resitem{Credits towards B.Sc. in Computer Science at the University of Victoria.}
-\end{itemize}
-
-
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-\resheading{Work Experience}
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-\ressubheading{Software Developer Co-op at EncoreFX}{Victoria, BC, Canada}{\href{https://www.encorefx.com}{\fontfamily{qcr}\selectfont encorefx.com}}{Sept. 2018 - Dec. 2018}
-
-\begin{itemize}
-	\resitem{Develop an online Foreign Exchange Trading and Payment platform using Angular 6 framework and C\# .Net framework.}
-	\resitem{Create new user features and interfaces for facilitating interactions, such as book deals, make new payments, upload payment file in CSV format, etc. This work involves designing, developing, and testing new Angular components on the front-end, as well as building and updating new RESTful API on the back-end for receiving and sending data.}
-	\resitem{In charge of E2E testing for the platform, and developed a Selenium test suite for ensuring the application features were behaving as intended.}
-	\resitem{Daily team meeting with six professional software engineers and quality assurance engineers. Two weeks per Sprint based on Scrum.}
-	\resitem{Tackle various bugs, report issues, and review merge request using GitLab.}
-\end{itemize}
-
-\ressubheading{Software Developer Co-op at Kinsol}{Victoria, BC, Canada}{\href{http://www.kinsol.io}{\fontfamily{qcr}\selectfont kinsol.io}}{May 2018 - Aug. 2018}
-
-\begin{itemize}
-	\resitem{Develop several responsive chat bot applications using Python Flask framework, JavaScript ES6, jQuery, and Bootstrap framework.}
-	\resitem{Teamwork with four professional software engineers using Git, Bitbucket, and JIRA to track bugs, issues, and new features. }
-    \resitem{Help Natural Language Processing team improve Deep Neural Networks, such as hyper-parameter tuning, regularization and optimization.}
-    \resitem{Communicate with clients twice a week to collect feedback, provide further improvement suggestions, time and cost estimation. }
-    \resitem{Shortly participate in the Computer Vision team to implement the method which detects and recognizes different objects using YOLO3 algorithm in Python.}
-\end{itemize}
-
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-\resheading{Skills}
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-\textbf{Web and Mobile Development}
-\begin{itemize}
-	\resitem{Fluent in JavaScript, jQuery, and front-end framework such as Angular}
-    \resitem{Proficient in Node.js, and back-end Python web framework Flask, Django}
-	\resitem{Familar with iOS, Android Development, and taking online courses to seek more practical knowledge to help personal project}
-\end{itemize}
-\textbf{Programming}
-\begin{itemize}
-	\resitem{Three years Python, Java programming experience}
-	\resitem{Two years C++, C\#, and Unity development experience}
-	\resitem{Familiar with Swift, MATLAB, Dart, Flutter, ElasticSearch, AWS, \LaTeX}
-\end{itemize}
-\textbf{Problem Solving}
-\begin{itemize}
-	\resitem{Ranked 900 globally at Open Kattis, solved 200+ algorithms problems using Java}
-    \resitem{Achieved 85\% in Data Structures and Algorithms II at the University of Victoria}
-	\resitem{Strong skills in Discrete Math, Statistics and Probability, Linear Algebra, and Calculus}
-\end{itemize}
-
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-\resheading{Professional Development}
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-\textbf{Online Courses through Coursera}
-\begin{itemize}
-	\resitem{C\# Programming for Unity Game Development Specialization}
-	\resitem{Deep Learning Specialization}
-    \resitem{Data Structure and Algorithms Specialization}
-\end{itemize}
-
-\textbf{Online Courses through edX}
-\begin{itemize}
-	\resitem{Professional Android Developer MicroMasters}
-	\resitem{Virtual Reality (VR) App Development Professional Certificate}
-    \resitem{AWS Developer: Building on AWS}
-\end{itemize}
-
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-\resheading{Project}
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-\textbf{UVic Confession and Crushes}
-\begin{itemize}
-	\resitem{A social media application using Flutter framework and Firebase.}
-    \resitem{Still under development, but the basic features such as register are done.}
-\end{itemize}
-
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-\resheading{Awards \& Scholarships}
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-\textbf{Associate with Institute for Advanced Study, Shenzhen University}
-\begin{itemize}
-	\resitem{Outstanding Innovative Talent}
-	\resitem{Excellent Student to Academic Performance}
-    \resitem{Huaqiang Entrance Scholarship}
-\end{itemize}
-
+	\fontencoding{T1}
+	
+	\begin{tabularx}{7in}{Xr}
+		\textbf{\Large Yiping Wang} & {\href{https://yiping.wang.vision}{{\fontfamily{qcr}\selectfont yiping.wang.vision}}} \\
+		{\fontfamily{qcr}\selectfont \href{mailto:yipingwang@uvic.ca}{yipingwang@uvic.ca}} & {\faGithub} {\href{https://www.github.com/yiping-wang}{\fontfamily{qcr}\selectfont /yiping-wang}} \\
+	\end{tabularx}
+	\par\noindent\rule{\textwidth}{1pt}
+	
+	%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+	\resheadingfirst{Education}
+	%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+	
+	\ressubheading{\href{https://www.uvic.ca/engineering/computerscience/index.php}{University of Victoria}}{Victoria, BC, Canada}{\textit{Honours Bachelor of Science} | \textit{Co-op}}{Sept. 2017 -- Present}
+	
+	\begin{itemize}
+		\resitem{Major in Computer Science and Minor in Electrical Engineering}
+		\resitem{Cumulative GPA: 8.50.}
+		\resitem{Expected Apr. 2021}
+	\end{itemize}
+	
+	\ressubheading{\href{http://ias.szu.edu.cn}{Institute for Advanced Study, Shenzhen University}}{Shenzhen, Guangdong, China}{\textit{Bachelor of Science}}{Sept. 2015 -- Jun. 2017}
+	
+	\begin{itemize}
+		\resitem{Major in Physics and Biology}
+		\resitem{Cumulative GPA: 3.76 / 4.00}
+		\resitem{Credits towards H.B.Sc. at the University of Victoria.}
+	\end{itemize}
+	
+	%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+	\resheading{Research Interests}
+	%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+	Computer Vision \textbullet{} Medical Image Processing \textbullet{} Deep Learning
+	
+	I aim to combine deep learning and medical images processing
+	in some way to reduce the fees to obtain expert diagnostic result as well as boost diagnostic accuary
+	
+	%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+	\resheading{Research Experience}
+	%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+	\ressubheading{\href{https://vision.uvic.ca}{Visual Computing Group at the University of Victoria}}{Victoria, BC, Canada}{\textit{Undergraduate Research Assistant}}{May 2019 -- Aug. 2019}
+	
+	\begin{itemize}
+		\resitem{TBD.}
+	\end{itemize}
+	
+	\ressubheading{\href{https://cs.uwaterloo.ca/future-graduate-students/uroc}{Undergraduate Research Opportunities Conference}}{Waterloo, ON, Canada}{\textit{Attendee}}{Sept. 27 2018 -- Sept. 30 2018}
+	
+	\begin{itemize}
+		\resitem{Fully funded workshop for top undergraduate students from North America to discover what graduate studies is like by working alongside faculty and current graduate students on mini-research projects and other activities at the University of Waterloo.}
+	\end{itemize}
+	
+	%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+	\resheading{Industrial Experience}
+	%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+	\ressubheading{\href{https://www.encorefx.com}{EncoreFX}}{Victoria, BC, Canada}{\textit{Software Developer Co-op}}{Sept. 2018 -- Dec. 2018}
+	
+	\begin{itemize}
+		\resitem{Developed an online Foreign Exchange Trading and Payment platform, EncoreFX Express, using Angular and C\# ASP.NET Core framework.}
+		\resitem{Created user features and interfaces for facilitating interactions, which involves designing, developing, and testing new Angular components on the front-end, as well as building and updating new RESTful API on the back-end.}
+		\resitem{Improved unit testing coverage using Jasmine, developed a Selenium test suite and researched in preventing Cross-Site Request Forgery and Cross-Site Scripting.}
+	\end{itemize}
+	
+	\ressubheading{\href{https://kinsol.io}{Kinsol}}{Victoria, BC, Canada}{\textit{Software Developer Co-op}}{May 2018 -- Aug. 2018}
+	
+	\begin{itemize}
+		\resitem{Developed several responsive chatbot applications using Python Flask framework, JavaScript ES6, jQuery, and Bootstrap framework.}
+		\resitem{Improved Deep Neural Networks, such as hyper-parameter tuning, regularization and optimization for the chatbot team.}
+		\resitem{Implemented the methods which detect and recognize different objects using OpenCV in Python for the traffic analysis team.}
+	\end{itemize}
+	
+	
+	%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+	\resheading{Projects}
+	%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+	
+	%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+	\resheading{Selected Course History}
+	%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+	
+	%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+	\resheading{Awards \& Scholarships}
+	%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+	\textbf{Associate with Institute for Advanced Study, Shenzhen University}
+	\begin{itemize}
+		\resitem{Outstanding Innovative Talent (2017)}
+		\resitem{Excellent Student to Academic Performance (2017)}
+		\resitem{Huaqiang Entrance Scholarship (2015)}
+	\end{itemize}
+	
+	%Z%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+	%\resheading{Professional Development}
+	%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+	%\textbf{Online Courses through Coursera}
+	%\begin{itemize}
+	%	\resitem{Deep Learning Specialization}
+	%	    \resitem{Data Structure and Algorithms Specialization}
+	%	\resitem{C\# Programming for Unity Game Development Specialization}
+	%\end{itemize}
+	
+	%\textbf{Online Courses through edX}
+	%\begin{itemize}
+	%	\resitem{Professional Android Developer MicroMasters}
+	%	\resitem{Virtual Reality (VR) App Development Professional Certificate}
+	%    \resitem{AWS Developer: Building on AWS}
+	%\end{itemize}
+	
 \end{document}
+
