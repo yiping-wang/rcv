@@ -1,0 +1,229 @@
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% Long Professional Curriculum Vitae
+% LaTeX Template
+% Version 1.1 (9/12/12)
+%
+% This template has been downloaded from:
+% http://www.latextemplates.com
+%
+% Original author:
+% Rensselaer Polytechnic Institute (http://www.rpi.edu/dept/arc/training/latex/resumes/)
+%
+% Important note:
+% This template requires the res.cls file to be in the same directory as the
+% .tex file. The res.cls file provides the resume style used for structuring the
+% document.
+%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+%----------------------------------------------------------------------------------------
+%	PACKAGES AND OTHER DOCUMENT CONFIGURATIONS
+%----------------------------------------------------------------------------------------
+
+\documentclass[10pt]{res} % Use the res.cls style, the font size can be changed to 11pt or 12pt here
+
+\usepackage{helvet} % Default font is the helvetica postscript font
+%\usepackage{newcent} % To change the default font to the new century schoolbook postscript font uncomment this line and comment the one above
+
+\newsectionwidth{0pt} % Stops section indenting
+\usepackage{hyperref}
+\usepackage{framed,tabularx,array,multirow,booktabs, xspace, graphicx, scrextend}
+\usepackage{graphicx}
+
+\newcommand*{\img}[1]{%
+    \raisebox{-.3\baselineskip}{%
+        \includegraphics[]{}[
+        height=\baselineskip,
+        width=\baselineskip,
+        keepaspectratio,
+        ]{#1}%
+    }%
+}
+
+\newcommand\nd{\textsuperscript{nd}\xspace}
+\newcommand\rd{\textsuperscript{rd}\xspace}
+\newcommand\nth{\textsuperscript{th}\xspace} %\th is taken already
+\hypersetup{
+    colorlinks=true,
+    linkcolor=blue,
+    filecolor=cyan,      
+    urlcolor=magenta,
+}
+\newcommand{\colorhref}[3][blue]{\href{#2}{\color{#1}{#3}}}%
+
+\begin{document}
+
+%----------------------------------------------------------------------------------------
+%	YOUR NAME AND ADDRESS(ES) SECTION
+%----------------------------------------------------------------------------------------
+
+\name{Yiping Wang\\ \textit{Curriculum vitae} \\} % Your name at the top
+
+% If you don't want one of the addresses, simply remove all the text in the first or second \address{} bracket
+
+\address{{\bf Honours Bachelor of Science} \\ Department of Computer Science \\ University of Victoria \\ Victoria, British Columbia, Canada} %\img{images/canada.svg}} % Your address 1
+
+\address{103 E 62nd Ave \\ 
+Vancouver, BC V5X 2E7 \\ (250) 885-2950 \\
+\url{yiping@wang.vision} \\
+\url{yiping.wang.vision}
+} % Your address 2
+
+%----------------------------------------------------------------------------------------
+
+\begin{resume}
+
+%----------------------------------------------------------------------------------------
+%	OBJECTIVE SECTION
+%----------------------------------------------------------------------------------------
+
+\section{\centerline{AREA OF INTERESTS}}
+
+\vspace{8pt} % Gap between title and text
+
+    My interests and enthusiasm are for \textbf{Computer Vision}, \textbf{Medical Image Analysis} and \textbf{Machine Learning}. I am exploring how to use medical image data and machine learning to help doctors make diagnostic decisions. I am broadly interested in machine learning for improving lesion detection and classification, anatomical structure segmentation and quantification, cancer diagnosis and therapy.  \\
+
+%----------------------------------------------------------------------------------------
+%	EDUCATION SECTION
+%----------------------------------------------------------------------------------------
+
+\section{\centerline{EDUCATION}} 
+
+\vspace{8pt} % Gap between title and text
+
+\textit{Honours Bachelor of Science} \hfill Sept. 2017 -- Present \\ 
+Computer Science \\ 
+Deparment of Computer Science, University of Victoria, Victoria, BC, Canada \\
+\textbf{Thesis}: Deep Learning for Computer Vision \\
+Cumulative GPA: 8.42 / 9.00 or 90.11\%
+
+\textit{Minor degree} \hfill May 2018 -- Present \\ 
+Electrical Engineering \\ 
+Deparment of Electrical and Computer Engineering, University of Victoria, Victoria, BC, Canada \\
+
+
+%----------------------------------------------------------------------------------------
+
+
+%----------------------------------------------------------------------------------------
+%	Research EXPERIENCE SECTION
+%----------------------------------------------------------------------------------------
+
+\section{\centerline{RESEARCH EXPERIENCE}} 
+
+\textit{Imagia} \hfill May 2020 -- Aug. 2020 \\
+\textbf{Research Intern} \hfill Montréal, Québec, Canada
+\begin{itemize} \itemsep -2pt % Reduce space between items
+\item Incoming Applied Research Intern
+\end{itemize}
+
+
+\textit{Artificial Intelligence in Medicine Lab, University of British Columbia} \hfill Sept. 2019 -- Apr. 2020 \\
+\textbf{Research Intern} \hfill Vancouver, British Columbia, Canada
+\begin{itemize} \itemsep -2pt % Reduce space between items
+\item Research in patch-level and WSI-level classification for epithelial ovarian carcinoma whole-slide pathology images.
+\item Propose and implement using deep learning-based multi-scale and transfer learning algorithm to improve patch-level classification accuracy as well as design novel algorithm for slide-level predictions. 
+\item Benchmark hand-crafted features, deep learning features and their combinations for patch-level classification.
+\item Evaluate the synthetic patch-level pathology images generated by ProGAN as an augmentation step to improve the performance of CNN for patch-level classification. 
+\item Perform survival analysis using Cox regression of ovarian cancer patients survival data. 
+\end{itemize}
+
+\textit{Visual Computing Group, University of Victoria} \hfill May 2019 -- Aug. 2019 \\
+\textbf{Research Intern} \hfill Victoria, British Columbia, Canada
+\begin{itemize} \itemsep -2pt % Reduce space between items
+\item Implement and apply a CVPR 2019 deep learning algorithm for automated detection and segmentation on liver tumor whole-slide pathology images using PyTorch.
+\item Develop a threshold-based algorithm for segmentation of tumor area in PET scans for further image registration. 
+\end{itemize}
+
+
+%----------------------------------------------------------------------------------------
+
+
+%----------------------------------------------------------------------------------------
+%	PROFESSIONAL EXPERIENCE SECTION
+%----------------------------------------------------------------------------------------
+
+\section{\centerline{PROFESSIONAL EXPERIENCE}} 
+
+\vspace{8pt} % Gap between title and text
+
+\textit{EncoreFX} \hfill Sept. 2018 -- Dec. 2018 \\
+\textbf{Software Developer Intern} \hfill Victoria, British Columbia,, Canada
+\begin{itemize} \itemsep -2pt % Reduce space between items
+\item Developed an online Foreign Exchange Trading and Payment platform, EncoreFX Express, using Angular and C\# ASP.NET Core framework.
+\item Created user features and interfaces for facilitating interactions, which involves designing, developing, and testing new Angular components on the front-end, as well as building and updating new RESTful API on the back-end.
+\item Improved unit testing coverage using Jasmine, developed a Selenium test suite and researched in preventing Cross-Site Request Forgery and Cross-Site Scripting.
+\end{itemize}
+
+\textit{Kinsol} \hfill May 2018 -- Aug. 2018 \\
+\textbf{Software Developer Intern} \hfill Victoria, British Columbia,, Canada
+\begin{itemize} \itemsep -2pt % Reduce space between items
+\item Developed responsive chatbot applications using Python Flask framework, JavaScript ES6, jQuery, and Bootstrap.
+\item Improved Deep Neural Networks through hyper-parameter tuning and regularization for the chatbot team.
+\item Applied YOLO algorithm for detecting and recognizing various vehicles and pedestrians in Python for the computer vision team.
+\end{itemize}
+
+%----------------------------------------------------------------------------------------
+
+% \vspace{0.2in} % Some whitespace between sections
+
+%----------------------------------------------------------------------------------------
+%	PUBLICATIONS SECTION
+%----------------------------------------------------------------------------------------
+
+\section{\centerline{PEER-REVIEWED JOURNAL PUBLICATIONS}} 
+
+\vspace{15pt} % Gap between title and text
+\begin{addmargin}[1.5em]{2em}
+-- 2020 \itemsep -2pt
+\end{addmargin}
+\begin{itemize} \itemsep -2pt % Reduce space between items
+\item A. Levine*, J. Peng*, D. Farnell, M. Nursey, \underline{Y. Wang}, J. Naso, C. Ren, H. Farahani, B. Tessier-Cloutier, C. Chen, D. Chiu, A. Talhouk, B. Sheffield, M. Riazy, P. Ip, C. Parra-Heran, A. Mills, N. Singh, T. Salisbury, J. Lee, T. Salcudean, S. S.M. Jones, D. G. Huntsman, C. B. Gilks, S. Yip, A. Bashashati, \colorhref[magenta]{https://www.biorxiv.org/content/10.1101/2020.02.24.963553v1}{\textbf{Synthesis of diagnostic quality cancer pathology images}}, Science Advances, 2020. (\textit{under review}) 
+\end{itemize}
+
+\section{\centerline{PEER-REVIEWED CONFERENCE PUBLICATIONS}} 
+
+\vspace{15pt} % Gap between title and text
+\begin{addmargin}[1.5em]{2em}
+-- 2020 \itemsep -2pt
+\end{addmargin}
+\begin{itemize} \itemsep -2pt % Reduce space between items
+\item \underline{Y. Wang*}, D. Farnell*, H. Farahani, M. Nursey, B. Tessier-Cloutier, S. J.M. Jones, D. G. Huntsman, C. Blake Gilks, A. Bashashati, \colorhref[magenta]{https://openreview.net/forum?id=VXdQD8B307}{\textbf{Classification of Epithelial Ovarian Carcinoma Whole-SlidePathology Images Using Deep Transfer Learning}}, 3\rd Medical Imaging with Deep Learning, Montréal, QC, Canada, 6 -- 8 July, 2020. (\textit{accepted})
+\end{itemize}
+
+
+%----------------------------------------------------------------------------------------
+%	Projects
+%----------------------------------------------------------------------------------------
+
+\section{\centerline{PROJECTS}}
+\begin{addmargin}[1.5em]{2em}
+-- 2019 \itemsep -2pt
+\end{addmargin}
+\begin{itemize} \itemsep -2pt % Reduce space between items
+\item \underline{Y. Wang}, C. Ten Have and  M. Kennedy, \colorhref[magenta]{https://drive.google.com/file/d/1XyAWn8jRRZzFj3G4Rd6Qv-b85v7mBodk/view?usp=sharing}{\textbf{End-to-End Facial Expression Modifier}}, CSC486B Deep Learning for Computer Vision Capstone Project (94\% A+), University of Victoria, Spring 2019. 
+\item B. Pattie and \underline{Y. Wang}, \colorhref[magenta]{https://drive.google.com/file/d/15seENaFC46H68YfpHWCDM-wuyLNIhuWC/view?usp=sharing}{\textbf{Segmentation of Overlapping Cervical Cells by Joint Level Set Method}}, ECE435 Medical Image Processing Capstone Project (95\% A+), University of Victoria, Spring 2019. 
+\end{itemize}
+
+% \vspace{8pt} % Gap between title and text
+
+%----------------------------------------------------------------------------------------
+
+\section{\centerline{ACTIVITIES}}
+\vspace{8pt} % Gap between title and text
+\textit{Waterloo Mathematics Undergraduate Research Conference} \hfill 27\nth Sept. 2019 -- 30\nth Sept. 2019 \\
+\textbf{Attendee} \hfill University of Waterloo, Waterloo, Ontario, Canada
+
+\textit{Undergraduate Research Opportunities Conference} \hfill 27\nth Sept. 2018 -- 30\nth Sept. 2018 \\
+\textbf{Attendee} \hfill University of Waterloo, Waterloo, Ontario, Canada
+
+\vspace{0.2in} % Some whitespace between sections
+
+%----------------------------------------------------------------------------------------
+
+\vspace{0.2in} % Some whitespace between sections
+
+%----------------------------------------------------------------------------------------
+
+\end{resume} 
+\end{document}
