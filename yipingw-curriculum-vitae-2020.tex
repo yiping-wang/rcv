@@ -20,7 +20,7 @@
 %    PACKAGES AND OTHER DOCUMENT CONFIGURATIONS
 %----------------------------------------------------------------------------------------
 
-\documentclass[10pt]{res} % Use the res.cls style, the font size can be changed to 11pt or 12pt here
+\documentclass[12pt]{res} % Use the res.cls style, the font size can be changed to 11pt or 12pt here
 \usepackage[utf8]{inputenc}
 \usepackage{helvet} % Default font is the helvetica postscript font
 %\usepackage{newcent} % To change the default font to the new century schoolbook postscript font uncomment this line and comment the one above
@@ -30,6 +30,8 @@
 \usepackage{framed,tabularx,array,multirow,booktabs, xspace, graphicx, scrextend}
 \usepackage{svg}
 \usepackage{float}
+\usepackage{fancyhdr}
+%\usepackage{tgschola}
 
 \newcommand*{\img}[1]{%
     \raisebox{-.3\baselineskip}{%
@@ -41,6 +43,10 @@
     }%
 }
 \usepackage{enumitem}
+\fancyhf{}
+\cfoot{\thepage}
+\pagestyle{fancy}   
+\renewcommand{\headrulewidth}{0pt}
 
 \newcommand\nd{\textsuperscript{nd}\xspace}
 \newcommand\rd{\textsuperscript{rd}\xspace}
@@ -59,16 +65,16 @@
 %    YOUR NAME AND ADDRESS(ES) SECTION
 %----------------------------------------------------------------------------------------
 
-\name{Yiping Wang\\ \textit{Curriculum vitae} \\} % Your name at the top
+\name{Yiping Wang\\ \textit{Curriculum vitae}  \\} %\includesvg[width=0.03\columnwidth]{images/china}\\ \textit{Curriculum vitae}  \\} % Your name at the top
 
 % If you don't want one of the addresses, simply remove all the text in the first or second \address{} bracket
 
 \address{{\bf Honours Bachelor of Science} \\ Department of Computer Science \\ University of Victoria \\ Victoria, British Columbia, Canada \includesvg[width=0.03\columnwidth]{images/canada}} 
 
-\address{103 E 62nd Ave \\ 
-Vancouver, BC V5X 2E7 \\ (250) 885-2950 \\
-\url{yiping@wang.vision} \\
-\url{yiping.wang.vision}
+\address{1789 Hartwood Pl \\ 
+Victoria BC V8N 1H9 \\ %(250) 885-2950 \\
+\href{mailto:yipingwang@uvic.ca}{\texttt{yipingwang@uvic.ca}}\\
+\url{http://yiping.wang.vision}
 } % Your address 2
 
 %----------------------------------------------------------------------------------------
@@ -83,95 +89,46 @@ Vancouver, BC V5X 2E7 \\ (250) 885-2950 \\
 
 \vspace{8pt} % Gap between title and text
 
-    My interests and enthusiasm are for \textbf{Computer Vision}, \textbf{Medical Image Analysis} and \textbf{Machine Learning}. I am exploring how to use medical image data and machine learning to help doctors make diagnostic decisions. I am broadly interested in machine learning for improving lesion detection and classification, anatomical structure segmentation and quantification, cancer diagnosis and therapy.  \\
+ My interests and enthusiasm are for \textbf{Computer Vision} and \textbf{Natural Language Processing} for \textbf{Medicine}. I am exploring how to use medical data and machine learning to help doctors make diagnostic decisions. I am broadly interested in computer vision for improving lesion detection and classification, anatomical structure segmentation and quantification in all type of imaging modalities. I am also fascinated by natural language processing for analyzing genomics and clinical reports, and their linkages between images. 
 
 %----------------------------------------------------------------------------------------
 %    EDUCATION SECTION
 %----------------------------------------------------------------------------------------
 
-\section{\centerline{EDUCATION}} 
+\section{\centerline{EDUCATION}}
+
+%\includegraphics[width=0.03\columnwidth]{images/uvic.png} \\ 
 
 \vspace{8pt} % Gap between title and text
+\textit{Honours Bachelor of Science } \hfill Sept. 2017 -- Apr. 2021 \\ 
+Computer Science, University of Victoria  \hfill Victoria, British Columbia, Canada \\
+Cumulative GPA: 8.45 / 9.00 or 90.21\% \\
+\textbf{Honours Project}: Environment Generalization in Multi-Agent Reinforcement Learning for Navigation
 
-\textit{Honours Bachelor of Science} \hfill Sept. 2017 -- Present \\ 
-Computer Science, University of Victoria \hfill Victoria, British Columbia, Canada \\
-\textbf{Thesis}: Deep Learning for Computer Vision \\
-Cumulative GPA: 8.42 / 9.00 or 90.11\%
+\textit{Minor degree} \hfill May 2018 -- Apr. 2021 \\ 
+Electrical Engineering, University of Victoria \hfill Victoria, British Columbia, Canada
 
-\textit{Minor degree} \hfill May 2018 -- Present \\ 
-Electrical Engineering, University of Victoria \hfill Victoria, British Columbia, Canada \\
-
-
-%----------------------------------------------------------------------------------------
-
-
-%----------------------------------------------------------------------------------------
-%    Research EXPERIENCE SECTION
-%----------------------------------------------------------------------------------------
-
-\section{\centerline{RESEARCH EXPERIENCE}} 
-
-\textit{Imagia} \hfill May 2020 -- Aug. 2020 \\
-\textbf{Research Intern} \hfill Montréal, Québec, Canada
-\begin{itemize} \itemsep -2pt % Reduce space between items
-\item Incoming Applied Research Intern
-\end{itemize}
-
-
-\textit{Artificial Intelligence in Medicine Lab, University of British Columbia} \hfill Sept. 2019 -- Apr. 2020 \\
-\textbf{Research Intern} \hfill Vancouver, British Columbia, Canada
-\begin{itemize} \itemsep -2pt % Reduce space between items
-\item Researched in patch-level and WSI-level classification for epithelial ovarian carcinoma whole-slide pathology images.
-\item Proposed and implemented deep learning-based multi-scale and transfer learning algorithms to improve patch-level classification accuracy as well as design novel algorithms for slide-level predictions. 
-\item Benchmarked hand-crafted features, deep learning features and their combinations for patch-level classification.
-\item Evaluated the synthetic patch-level pathology images generated by ProGAN as an augmentation step to improve the performance of CNN for patch-level classification. 
-\item Performed survival analysis using the Cox regression of ovarian cancer patients' survival data. 
-\item Designed and built general deep learning for pathology image classification platform using PyTorch, Docker and Kronos. 
-\end{itemize}
-
-\textit{Visual Computing Group, University of Victoria} \hfill May 2019 -- Aug. 2019 \\
-\textbf{Research Intern} \hfill Victoria, British Columbia, Canada
-\begin{itemize} \itemsep -2pt % Reduce space between items
-\item Researched in patch-level tumour segmentation for the liver hepatocellular carcinoma whole-slide pathology images. 
-\item Implemented and applied a CVPR 2019 multi-scale with an adaptive weighting deep learning algorithm for automated patch-level detection and segmentation. 
-\item Developed an unsupervised threshold-based algorithm for segmentation of the tumour area in PET scans as a preprocessing step for image registration. 
-\end{itemize}
+\textit{Bachelor of Science (Transferred)} \hfill May 2015 -- Jul. 2017 \\ 
+Physics and Biology, Shenzhen University  \hfill Shenzhen, Guangdong, China \\
+Cumulative GPA: 3.76 / 4.5
 
 
 %----------------------------------------------------------------------------------------
-
-
-%----------------------------------------------------------------------------------------
-%    PROFESSIONAL EXPERIENCE SECTION
-%----------------------------------------------------------------------------------------
-
-\section{\centerline{PROFESSIONAL EXPERIENCE}} 
-
-\vspace{8pt} % Gap between title and text
-
-\textit{EncoreFX} \hfill Sept. 2018 -- Dec. 2018 \\
-\textbf{Software Developer Intern} \hfill Victoria, British Columbia, Canada
-\begin{itemize} \itemsep -2pt % Reduce space between items
-\item Developed an online Foreign Exchange Trading and Payment platform, EncoreFX Express, using Angular and C\# ASP.NET Core framework.
-\item Created user features and interfaces for facilitating interactions, which involves designing, developing, and testing new Angular components on the front-end, as well as building and updating new RESTful API on the back-end.
-\item Improved unit testing coverage using Jasmine, developed a Selenium test suite and researched in preventing Cross-Site Request Forgery and Cross-Site Scripting.
-\end{itemize}
-
-\textit{Kinsol} \hfill May 2018 -- Aug. 2018 \\
-\textbf{Software Developer Intern} \hfill Victoria, British Columbia, Canada
-\begin{itemize} \itemsep -2pt % Reduce space between items
-\item Developed responsive chatbot applications using Python Flask framework, JavaScript ES6, jQuery, and Bootstrap.
-\item Improved Deep Neural Networks through hyper-parameter tuning and regularization for the chatbot team.
-\item Applied YOLO algorithm for detecting and recognizing various vehicles and pedestrians in Python for the computer vision team.
-\end{itemize}
-
-%----------------------------------------------------------------------------------------
-
-% \vspace{0.2in} % Some whitespace between sections
 
 %----------------------------------------------------------------------------------------
 %    PUBLICATIONS SECTION
 %----------------------------------------------------------------------------------------
+
+% \section{\centerline{PEER-REVIEWED CONFERENCE PUBLICATIONS}}
+
+% \vspace{15pt} % Gap between title and text
+% \begin{addmargin}[1.5em]{2em}
+% -- 2020 \itemsep -2pt
+% \end{addmargin}
+% \begin{itemize} \itemsep -2pt % Reduce space between items
+% \item A. Pesaranghader*, \underline{Y. Wang*}, M. Havaei,  \colorhref[magenta]{http://www.arxiv.org}{\textbf{CT-SGAN: Computed Tomography with 3D Synthetic Medical Images using Recurrent Generative Adversarial Networks}}, 2020. (\textit{Manuscript in preparation}) 
+% %\item X. Mao, Q. Lao, \underline{Y. Wang}, M. Havaei  \colorhref[magenta]{http://www.arxiv.org}{\textbf{Text-to-Images}}, 2020. (\textit{Manscript writing}) 
+% \end{itemize}
 
 \section{\centerline{PEER-REVIEWED JOURNAL PUBLICATIONS}} 
 
@@ -180,25 +137,75 @@ Electrical Engineering, University of Victoria \hfill Victoria, British Columbia
 -- 2020 \itemsep -2pt
 \end{addmargin}
 \begin{itemize} \itemsep -2pt % Reduce space between items
-\item A. Levine*, J. Peng*, D. Farnell, M. Nursey, \underline{Y. Wang}, J. Naso, C. Ren, H. Farahani, B. Tessier-Cloutier, C. Chen, D. Chiu, A. Talhouk, B. Sheffield, M. Riazy, P. Ip, C. Parra-Heran, A. Mills, N. Singh, T. Salisbury, J. Lee, T. Salcudean, S. S.M. Jones, D. G. Huntsman, C. B. Gilks, S. Yip, A. Bashashati, \colorhref[magenta]{https://www.biorxiv.org/content/10.1101/2020.02.24.963553v1}{\textbf{Synthesis of diagnostic quality cancer pathology images}}, Science Advances, 2020. (\textit{under review}) 
+\item A. Levine*, J. Peng*, D. Farnell, M. Nursey, \underline{Y. Wang}, J. Naso, C. Ren, H. Farahani, B. Tessier-Cloutier, C. Chen, D. Chiu, A. Talhouk, B. Sheffield, M. Riazy, P. Ip, C. Parra-Heran, A. Mills, N. Singh, T. Salisbury, J. Lee, T. Salcudean, S. S.M. Jones, D. G. Huntsman, C. B. Gilks, S. Yip, A. Bashashati, \colorhref[magenta]{https://onlinelibrary.wiley.com/doi/abs/10.1002/path.5509}{\textbf{Synthesis of diagnostic quality cancer pathology images}}, The Journal of Pathology.
+
+%\textcolor{cyan}{\texttt{doi:10.1002/path.5509}} 
 \end{itemize}
 
-\section{\centerline{PEER-REVIEWED CONFERENCE PUBLICATIONS}} 
+\section{\centerline{PEER-REVIEWED CONFERENCE PAPERS}} 
 
 \vspace{15pt} % Gap between title and text
 \begin{addmargin}[1.5em]{2em}
 -- 2020 \itemsep -2pt
 \end{addmargin}
 \begin{itemize} \itemsep -2pt % Reduce space between items
-\item \underline{Y. Wang*}, D. Farnell*, H. Farahani, M. Nursey, B. Tessier-Cloutier, S. J.M. Jones, D. G. Huntsman, C. Blake Gilks, A. Bashashati, \colorhref[magenta]{https://openreview.net/forum?id=VXdQD8B307}{\textbf{Classification of Epithelial Ovarian Carcinoma Whole-Slide Pathology Images Using Deep Transfer Learning}}, 3\rd International Conference on Medical Imaging with Deep Learning, Montréal, QC, Canada, 6 -- 8 July, 2020. (\textit{accepted})
+\item \underline{Y. Wang*}, D. Farnell*, H. Farahani, M. Nursey, B. Tessier-Cloutier, S. J.M. Jones, D. G. Huntsman, C. Blake Gilks, A. Bashashati, \colorhref[magenta]{https://openreview.net/forum?id=VXdQD8B307}{\textbf{Classification of Epithelial Ovarian Carcinoma Whole-Slide Pathology Images Using Deep Transfer Learning}}, 3\rd International Conference on Medical Imaging with Deep Learning, Montréal, QC, Canada, 6 -- 8 July, 2020.
 \end{itemize}
 
+%----------------------------------------------------------------------------------------
+%    Research EXPERIENCE SECTION
+%----------------------------------------------------------------------------------------
+
+\section{\centerline{RESEARCH EXPERIENCE}} 
+
+\textit{University of Victoria} \hfill Sept. 2020 -- Apr. 2021 \\
+\textbf{Research Assistant} \hfill Victoria, British Columbia, Canada
+\begin{itemize} \itemsep -2pt % Reduce space between items
+\item Recipient of the Jamie Cassels Undergraduate Research Award. 
+\item Investigate the value of training environments and generalization in Deep Reinforcement Learning-based navigation agents.
+
+\end{itemize}
+
+\textit{Imagia} \hfill May 2020 -- Dec. 2020 \\
+\textbf{Research Intern} \hfill Montréal, Québec, Canada
+\begin{itemize} \itemsep -2pt % Reduce space between items
+\item Research in generative models for lung 3D CT-scans.
+\item Propose and implement a novel recurrent generative adversarial network.
+\item Evaluate quantitatively and qualitatively the performance of various generative models in CT-scans and dermatology images. 
+
+\end{itemize}
+
+
+\textit{University of British Columbia} \hfill Sept. 2019 -- Apr. 2020 \\
+\textbf{Research Intern} \hfill Vancouver, British Columbia, Canada
+\begin{itemize} \itemsep -2pt % Reduce space between items
+\item Researched in patch-level and WSI-level classification for epithelial ovarian carcinoma whole-slide pathology images.
+\item Proposed and implemented deep learning-based multi-scale and transfer learning algorithms to improve patch-level classification accuracy, as well as develop algorithms for slide-level predictions. 
+\item Benchmarked hand-crafted features, deep learning features and their combinations for patch-level classification.
+\item Evaluated the synthetic patch-level pathology images generated by progressive GAN as an augmentation source to improve the performance of CNN for patch-level classification. 
+\item Performed survival analysis using the Cox regression of ovarian cancer patients' survival data.
+\end{itemize}
+
+\textit{University of Victoria} \hfill May 2019 -- Aug. 2019 \\
+\textbf{Research Intern} \hfill Victoria, British Columbia, Canada
+\begin{itemize} \itemsep -2pt % Reduce space between items
+\item Researched in patch-level tumour segmentation for the liver hepatocellular carcinoma whole-slide pathology images. 
+\item Implemented and applied a CVPR 2019 multi-scale with an adaptive weighting deep learning algorithm for automated patch-level detection and segmentation.
+\item Developed an unsupervised threshold-based algorithm for segmentation of the tumour area in PET scans as a preprocessing step for image registration. 
+\end{itemize}
+
+
+%----------------------------------------------------------------------------------------
+
+%----------------------------------------------------------------------------------------
+
+% \vspace{0.2in} % Some whitespace between sections
 
 %----------------------------------------------------------------------------------------
 %    Projects
 %----------------------------------------------------------------------------------------
 
-\section{\centerline{PROJECTS}}
+\section{\centerline{CAPSTONE PROJECTS}}
 \begin{addmargin}[1.5em]{2em}
 -- 2019 \itemsep -2pt
 \end{addmargin}
@@ -222,10 +229,38 @@ Electrical Engineering, University of Victoria \hfill Victoria, British Columbia
 \vspace{0.2in} % Some whitespace between sections
 
 %----------------------------------------------------------------------------------------
-
-\vspace{0.2in} % Some whitespace between sections
-
+%    PROFESSIONAL EXPERIENCE SECTION
 %----------------------------------------------------------------------------------------
+
+\section{\centerline{SOFTWARE DEVELOPMENT EXPERIENCE}} 
+
+\vspace{8pt} % Gap between title and text
+
+\textit{EncoreFX (now Global Reach Canada)} \hfill Sept. 2018 -- Dec. 2018 \\
+\textbf{Software Developer Intern} \hfill Victoria, British Columbia, Canada
+\begin{itemize} \itemsep -2pt % Reduce space between items
+\item Developed an online foreign exchange trading and payment platform using Angular and C\# ASP.NET Core framework.
+\item Created user features and interfaces for facilitating interactions, which involves designing, developing, and testing new Angular components on the front-end, as well as building and updating new RESTful API on the back-end.
+\item Improved unit testing coverage using Jasmine, developed a Selenium test suite and researched in preventing cross-site request forgery and cross-site scripting.
+\end{itemize}
+
+\textit{Kinsol} \hfill May 2018 -- Aug. 2018 \\
+\textbf{Software Developer Intern} \hfill Victoria, British Columbia, Canada
+\begin{itemize} \itemsep -2pt % Reduce space between items
+\item Developed responsive chatbot applications using Python Flask framework, JavaScript, jQuery, and Bootstrap.
+\item Improved natural language understanding model through hyper-parameter tuning and regularization for the chatbot team.
+\item Applied YOLO algorithm for detecting and recognizing vehicles and pedestrians in Darknet for the computer vision team.
+\end{itemize}
+
+\section{\centerline{SKILLS}} 
+
+\vspace{8pt} % Gap between title and text
+
+\begin{itemize} \itemsep -2pt % Reduce space between items
+\item \textbf{Languages}: Python, Java, C++
+\item \textbf{Libraries}: NumPy, PyTorch, TensorFlow, OpenCV, OpenGL, Unity
+\item \textbf{Tools}: Git, Docker, AWS, Linux
+\end{itemize}
 
 \end{resume} 
 \end{document}
